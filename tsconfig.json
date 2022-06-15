@@ -1,0 +1,14 @@
+﻿{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "sourceMap": true,
+    "inlineSourceMap": false,
+    "removeComments": false,
+    "strict": true,
+    "importHelpers": true,
+    "lib": ["dom", "es2017"]
+  }
+}
