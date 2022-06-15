@@ -2,13 +2,14 @@ export class ConsoleHelper {
   private formats: string[] = [];
   private strings: string[] = [];
 
-  public write(text: string, format?: { color: string; bgColor: string }) {
+  public write(text: string, format?: { color: string; bgColor: string, uppercase?: boolean }) {
     if (format) {
       const color = format.color || "inherit";
       const bgColor = format.bgColor || "inherit";
+      const finalText = format.uppercase ? text.toUpperCase() : text
       this.formats.push("%c%s%c");
       this.strings.push(`color:${color};background-color:${bgColor};`);
-      this.strings.push(text);
+      this.strings.push(finalText);
       this.strings.push("color:inherit;background-color:inherit;");
     } else {
       this.formats.push("%s");
