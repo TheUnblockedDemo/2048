@@ -69,6 +69,7 @@ export interface IGameState {
     }
 
     const action = this.userActionsQueue.splice(0, 1)[0];
+    
     return this.processSingleAction(action);
   }
 
