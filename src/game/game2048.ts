@@ -65,7 +65,7 @@ export interface IGameState {
 
   public async processAction() {
     while (this.userActionsQueue.length === 0) {
-      await stay(100);
+      await stay(150);
     }
 
     const action = this.userActionsQueue.splice(0, 1)[0];
