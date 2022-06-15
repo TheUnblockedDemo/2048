@@ -25,9 +25,9 @@ export interface IGameState {
   gridSerialized: string;
 }
 
+ // This is the main game class. 
  export class Game2048 {
   private scores: number = 0;
-  private tileValue: number = 4;
   public grid: Grid;
   private userActionsQueue: Action[] = [];
 
@@ -211,7 +211,7 @@ export interface IGameState {
     const tile: Tile = {
       rowIndex: pos.rowIndex,
       cellIndex: pos.cellIndex,
-      value: tileValue
+      value: 2
     };
     this.grid.insertTileByPos(tile, tile.value);
     
