@@ -12,7 +12,7 @@ export interface MoveAction {
 
 export interface MagicAction {
   type: "MAGIC";
-  spell: Spell;
+  spell: "Spell";
 }
 
 export type Action = StartNewGameAction | MoveAction | MagicAction;
