@@ -1,4 +1,4 @@
-import { Direction } from "./enums";
+import { Direction, Spell } from "./enums";
 
 export interface StartNewGameAction {
   type: "START";
