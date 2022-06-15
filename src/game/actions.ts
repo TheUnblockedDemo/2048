@@ -15,4 +15,9 @@ export interface MagicAction {
   spell: Spell;
 }
 
-export type Action = StartNewGameAction | MoveAction | MagicAction;
+export interface CheatAction {
+  type: "CHEATCODE";
+  cheatCode: CheatCode;
+}
+
+export type Action = StartNewGameAction | MoveAction | MagicAction | CheatAction;
