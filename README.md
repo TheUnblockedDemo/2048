@@ -18,3 +18,9 @@ Used 3rd party technologies and assets:
 - CSS framework [Bulma](https://github.com/jgthms/bulma)
 - [TypeScript](https://github.com/Microsoft/TypeScript)
 - [Webpack](https://github.com/webpack/webpack)
+
+## How to develop
+
+- install docker
+- make
+
