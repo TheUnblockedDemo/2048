@@ -13,11 +13,9 @@ export class BaseEvents {
         this.instance.threads = new ThreadEvents(eventCache);
     }
 
-    private static instance: BaseEvents;
+    private static instance: BaseEvents = new BaseEvents();
+    
     public static getInstance(): BaseEvents {
-        if (!BaseEvents.instance) {
-            BaseEvents.instance = new BaseEvents();
-        }
         return BaseEvents.instance;
     }
 

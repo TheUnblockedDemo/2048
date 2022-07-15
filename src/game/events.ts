@@ -9,6 +9,12 @@ This is the file containing events
 
 */
 
+export interface IGameState {
+  scores: number;
+  gridSerialized: string;
+}
+
+
 export class TileMergeEvent extends GameEvent {
   constructor(
     public oldPosition: TilePosition,
