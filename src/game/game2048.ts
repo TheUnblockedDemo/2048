@@ -27,11 +27,15 @@ export interface IGameState {
  // This is the main game class. 
  export class Game2048 {
   private scores: number = 0;
-  public grid: Grid;
+  private grid: Grid;
   private userActionsQueue: Action[] = [];
 
   constructor(size: number, private rand: IRandom) {
     this.grid = new Grid(size);
+  }
+
+  public getGrid() {
+    return this.grid;
   }
 
   public getScores() {
