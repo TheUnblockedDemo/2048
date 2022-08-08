@@ -42,6 +42,10 @@ export interface IGameState {
     return this.scores;
   }
 
+  public getUserActionsQueue() {
+    return this.userActionsQueue;
+  }
+
   public serialize(): string {
     const state: IGameState = {
       scores: 0,
