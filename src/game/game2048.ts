@@ -161,7 +161,12 @@ export interface IGameState {
     return gameEvents;
   }
 
+
+  private exponentialThreshold = 32
   private calculateScoreValue(eventValue: number): number {
+    if (eventValue <= this.exponentialThreshold) {
+      return eventValue
+    }
     return eventValue ** 2;
   }
 
