@@ -161,6 +161,10 @@ export interface IGameState {
     return gameEvents;
   }
 
+  private calculateScoreValue(eventValue: number): number {
+    return eventValue ** 2;
+  }
+
   private processMoveAction(move: Direction): GameEvent[] {
     const gameEvents = this.calculateMoveEvents(move);
 
@@ -174,7 +178,7 @@ export interface IGameState {
       if (event instanceof TileMergeEvent) {
         this.grid.updateTileByPos(event.mergePosition, event.newValue);
         this.grid.removeTileByPos(event.oldPosition);
-        this.scores += event.newValue;
+        this.scores += this.calculateScoreValue(event.newValue);
       }
     }
 
