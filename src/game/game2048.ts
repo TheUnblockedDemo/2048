@@ -29,7 +29,7 @@ export interface IGameState {
   private scores: number = 0;
   private grid: Grid;
   private userActionsQueue: Action[] = [];
-
+  public highScore: number;
   constructor(size: number, private rand: IRandom) {
     this.grid = new Grid(size);
   }
